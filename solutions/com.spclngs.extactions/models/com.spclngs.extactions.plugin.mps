@@ -30,8 +30,17 @@
       <concept id="1203092361741" name="jetbrains.mps.lang.plugin.structure.ModificationStatement" flags="lg" index="tT9cl">
         <reference id="1203092736097" name="modifiedGroup" index="tU$_T" />
       </concept>
+      <concept id="1209911036758" name="jetbrains.mps.lang.plugin.structure.GetGroupOperation" flags="nn" index="2OkkDf">
+        <reference id="1209911052601" name="group" index="2Okoww" />
+      </concept>
     </language>
     <language id="ef7bf5ac-d06c-4342-b11d-e42104eb9343" name="jetbrains.mps.lang.plugin.standalone">
+      <concept id="481983775135178851" name="jetbrains.mps.lang.plugin.standalone.structure.ApplicationPluginInitBlock" flags="in" index="2uRRBj" />
+      <concept id="481983775135178840" name="jetbrains.mps.lang.plugin.standalone.structure.ApplicationPluginDeclaration" flags="ng" index="2uRRBC">
+        <child id="481983775135178842" name="initBlock" index="2uRRBE" />
+        <child id="481983775135178843" name="disposeBlock" index="2uRRBF" />
+      </concept>
+      <concept id="481983775135178846" name="jetbrains.mps.lang.plugin.standalone.structure.ApplicationPluginDisposeBlock" flags="in" index="2uRRBI" />
       <concept id="7520713872864775836" name="jetbrains.mps.lang.plugin.standalone.structure.StandalonePluginDescriptor" flags="ng" index="2DaZZR" />
     </language>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -42,13 +51,20 @@
         <child id="1068498886297" name="rValue" index="37vLTx" />
         <child id="1068498886295" name="lValue" index="37vLTJ" />
       </concept>
+      <concept id="1153422305557" name="jetbrains.mps.baseLanguage.structure.LessThanOrEqualsExpression" flags="nn" index="2dkUwp" />
       <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1465982738277781862" name="jetbrains.mps.baseLanguage.structure.PlaceholderMember" flags="nn" index="2tJIrI" />
+      <concept id="1239714755177" name="jetbrains.mps.baseLanguage.structure.AbstractUnaryNumberOperation" flags="nn" index="2$Kvd9">
+        <child id="1239714902950" name="expression" index="2$L3a6" />
+      </concept>
       <concept id="1188207840427" name="jetbrains.mps.baseLanguage.structure.AnnotationInstance" flags="nn" index="2AHcQZ">
         <reference id="1188208074048" name="annotation" index="2AI5Lk" />
       </concept>
       <concept id="1188208481402" name="jetbrains.mps.baseLanguage.structure.HasAnnotation" flags="ng" index="2AJDlI">
         <child id="1188208488637" name="annotation" index="2AJF6D" />
+      </concept>
+      <concept id="1154032098014" name="jetbrains.mps.baseLanguage.structure.AbstractLoopStatement" flags="nn" index="2LF5Ji">
+        <child id="1154032183016" name="body" index="2LFqv$" />
       </concept>
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
@@ -69,12 +85,14 @@
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
+      <concept id="1081236700938" name="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" flags="ig" index="2YIFZL" />
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
       </concept>
       <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
         <reference id="1144433057691" name="classifier" index="1PxDUh" />
       </concept>
+      <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1070534644030" name="jetbrains.mps.baseLanguage.structure.BooleanType" flags="in" index="10P_77" />
       <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg" />
@@ -93,6 +111,7 @@
       </concept>
       <concept id="1068498886292" name="jetbrains.mps.baseLanguage.structure.ParameterDeclaration" flags="ir" index="37vLTG" />
       <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
+      <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
@@ -102,6 +121,7 @@
         <child id="1068580123135" name="body" index="3clF47" />
       </concept>
       <concept id="1068580123165" name="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" flags="ig" index="3clFb_" />
+      <concept id="1068580123152" name="jetbrains.mps.baseLanguage.structure.EqualsExpression" flags="nn" index="3clFbC" />
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
@@ -122,6 +142,10 @@
       <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
         <child id="1068581517676" name="expression" index="3cqZAk" />
       </concept>
+      <concept id="1068581242864" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" flags="nn" index="3cpWs8">
+        <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
+      </concept>
+      <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
       <concept id="1068581517677" name="jetbrains.mps.baseLanguage.structure.VoidType" flags="in" index="3cqZAl" />
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
@@ -140,8 +164,16 @@
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
       </concept>
+      <concept id="1214918800624" name="jetbrains.mps.baseLanguage.structure.PostfixIncrementExpression" flags="nn" index="3uNrnE" />
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
+      </concept>
+      <concept id="1144230876926" name="jetbrains.mps.baseLanguage.structure.AbstractForStatement" flags="nn" index="1DupvO">
+        <child id="1144230900587" name="variable" index="1Duv9x" />
+      </concept>
+      <concept id="1144231330558" name="jetbrains.mps.baseLanguage.structure.ForStatement" flags="nn" index="1Dw8fO">
+        <child id="1144231399730" name="condition" index="1Dwp0S" />
+        <child id="1144231408325" name="iteration" index="1Dwrff" />
       </concept>
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
         <child id="8356039341262087992" name="line" index="1aUNEU" />
@@ -149,6 +181,9 @@
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
       <concept id="1146644641414" name="jetbrains.mps.baseLanguage.structure.ProtectedVisibility" flags="nn" index="3Tmbuc" />
+      <concept id="1116615150612" name="jetbrains.mps.baseLanguage.structure.ClassifierClassExpression" flags="nn" index="3VsKOn">
+        <reference id="1116615189566" name="classifier" index="3VsUkX" />
+      </concept>
     </language>
     <language id="443f4c36-fcf5-4eb6-9500-8d06ed259e3e" name="jetbrains.mps.baseLanguage.classifiers">
       <concept id="1205752633985" name="jetbrains.mps.baseLanguage.classifiers.structure.ThisClassifierExpression" flags="nn" index="2WthIp" />
@@ -187,54 +222,58 @@
     </node>
     <node concept="fu6FP" id="4_91s3jaMLT" role="ftER_">
       <node concept="3clFbS" id="4_91s3jaMLV" role="2VODD2">
-        <node concept="3clFbF" id="4_91s3jaNkC" role="3cqZAp">
-          <node concept="2OqwBi" id="4_91s3jaNES" role="3clFbG">
-            <node concept="2WthIp" id="4_91s3jaNk_" role="2Oq$k0" />
-            <node concept="liA8E" id="4_91s3jaNTF" role="2OqNvi">
-              <ref role="37wK5l" to="qkt:~DefaultActionGroup.add(com.intellij.openapi.actionSystem.AnAction)" resolve="add" />
-              <node concept="2ShNRf" id="4_91s3jaNY0" role="37wK5m">
-                <node concept="1pGfFk" id="4_91s3jaPeF" role="2ShVmc">
-                  <property role="373rjd" value="true" />
-                  <ref role="37wK5l" node="4_91s3ja1fy" resolve="ToggleActionExample" />
-                  <node concept="3cmrfG" id="4_91s3jaPic" role="37wK5m">
-                    <property role="3cmrfH" value="1" />
+        <node concept="3clFbF" id="19LUKkm6OhW" role="3cqZAp">
+          <node concept="2YIFZM" id="19LUKkm6Oni" role="3clFbG">
+            <ref role="37wK5l" node="19LUKkm6Mhq" resolve="ensureActionsRegistered" />
+            <ref role="1Pybhc" node="4_91s3j9Ubk" resolve="ToggleActionExample" />
+          </node>
+        </node>
+        <node concept="1Dw8fO" id="19LUKkm6y2m" role="3cqZAp">
+          <node concept="3clFbS" id="19LUKkm6y2o" role="2LFqv$">
+            <node concept="3clFbF" id="19LUKkm6tpf" role="3cqZAp">
+              <node concept="2OqwBi" id="19LUKkm6tL5" role="3clFbG">
+                <node concept="2WthIp" id="19LUKkm6tpd" role="2Oq$k0" />
+                <node concept="liA8E" id="19LUKkm6xK_" role="2OqNvi">
+                  <ref role="37wK5l" to="qkt:~DefaultActionGroup.add(com.intellij.openapi.actionSystem.AnAction)" resolve="add" />
+                  <node concept="2OqwBi" id="19LUKkm6$gx" role="37wK5m">
+                    <node concept="2YIFZM" id="19LUKkm6Ow1" role="2Oq$k0">
+                      <ref role="37wK5l" to="qkt:~ActionManager.getInstance()" resolve="getInstance" />
+                      <ref role="1Pybhc" to="qkt:~ActionManager" resolve="ActionManager" />
+                    </node>
+                    <node concept="liA8E" id="19LUKkm6$mo" role="2OqNvi">
+                      <ref role="37wK5l" to="qkt:~ActionManager.getAction(java.lang.String)" resolve="getAction" />
+                      <node concept="2YIFZM" id="19LUKkm6$Rg" role="37wK5m">
+                        <ref role="37wK5l" node="19LUKkm69CA" resolve="getId" />
+                        <ref role="1Pybhc" node="4_91s3j9Ubk" resolve="ToggleActionExample" />
+                        <node concept="37vLTw" id="19LUKkm6$Sz" role="37wK5m">
+                          <ref role="3cqZAo" node="19LUKkm6y2p" resolve="i" />
+                        </node>
+                      </node>
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
-        </node>
-        <node concept="3clFbF" id="4_91s3jaPiX" role="3cqZAp">
-          <node concept="2OqwBi" id="4_91s3jaPiY" role="3clFbG">
-            <node concept="2WthIp" id="4_91s3jaPiZ" role="2Oq$k0" />
-            <node concept="liA8E" id="4_91s3jaPj0" role="2OqNvi">
-              <ref role="37wK5l" to="qkt:~DefaultActionGroup.add(com.intellij.openapi.actionSystem.AnAction)" resolve="add" />
-              <node concept="2ShNRf" id="4_91s3jaPj1" role="37wK5m">
-                <node concept="1pGfFk" id="4_91s3jaPj2" role="2ShVmc">
-                  <property role="373rjd" value="true" />
-                  <ref role="37wK5l" node="4_91s3ja1fy" resolve="ToggleActionExample" />
-                  <node concept="3cmrfG" id="4_91s3jaPj3" role="37wK5m">
-                    <property role="3cmrfH" value="2" />
-                  </node>
-                </node>
-              </node>
+          <node concept="3cpWsn" id="19LUKkm6y2p" role="1Duv9x">
+            <property role="TrG5h" value="i" />
+            <node concept="10Oyi0" id="19LUKkm6yk9" role="1tU5fm" />
+            <node concept="3cmrfG" id="19LUKkm6ykP" role="33vP2m">
+              <property role="3cmrfH" value="1" />
             </node>
           </node>
-        </node>
-        <node concept="3clFbF" id="4_91s3jaPyu" role="3cqZAp">
-          <node concept="2OqwBi" id="4_91s3jaPyv" role="3clFbG">
-            <node concept="2WthIp" id="4_91s3jaPyw" role="2Oq$k0" />
-            <node concept="liA8E" id="4_91s3jaPyx" role="2OqNvi">
-              <ref role="37wK5l" to="qkt:~DefaultActionGroup.add(com.intellij.openapi.actionSystem.AnAction)" resolve="add" />
-              <node concept="2ShNRf" id="4_91s3jaPyy" role="37wK5m">
-                <node concept="1pGfFk" id="4_91s3jaPyz" role="2ShVmc">
-                  <property role="373rjd" value="true" />
-                  <ref role="37wK5l" node="4_91s3ja1fy" resolve="ToggleActionExample" />
-                  <node concept="3cmrfG" id="4_91s3jaPy$" role="37wK5m">
-                    <property role="3cmrfH" value="3" />
-                  </node>
-                </node>
-              </node>
+          <node concept="2dkUwp" id="19LUKkm6$CY" role="1Dwp0S">
+            <node concept="37vLTw" id="19LUKkm6ylf" role="3uHU7B">
+              <ref role="3cqZAo" node="19LUKkm6y2p" resolve="i" />
+            </node>
+            <node concept="10M0yZ" id="19LUKkm6zj$" role="3uHU7w">
+              <ref role="3cqZAo" node="19LUKkm6vT8" resolve="ACTION_COUNT" />
+              <ref role="1PxDUh" node="4_91s3j9Ubk" resolve="ToggleActionExample" />
+            </node>
+          </node>
+          <node concept="3uNrnE" id="19LUKkm6zWI" role="1Dwrff">
+            <node concept="37vLTw" id="19LUKkm6zWK" role="2$L3a6">
+              <ref role="3cqZAo" node="19LUKkm6y2p" resolve="i" />
             </node>
           </node>
         </node>
@@ -243,6 +282,145 @@
   </node>
   <node concept="312cEu" id="4_91s3j9Ubk">
     <property role="TrG5h" value="ToggleActionExample" />
+    <node concept="Wx3nA" id="19LUKkm6vT8" role="jymVt">
+      <property role="TrG5h" value="ACTION_COUNT" />
+      <property role="3TUv4t" value="true" />
+      <node concept="10Oyi0" id="19LUKkm6vTb" role="1tU5fm" />
+      <node concept="3cmrfG" id="19LUKkm6vTc" role="33vP2m">
+        <property role="3cmrfH" value="3" />
+      </node>
+      <node concept="3Tm1VV" id="19LUKkm6vTa" role="1B3o_S" />
+    </node>
+    <node concept="2tJIrI" id="19LUKkm6uBt" role="jymVt" />
+    <node concept="2YIFZL" id="19LUKkm69CA" role="jymVt">
+      <property role="TrG5h" value="getId" />
+      <node concept="3clFbS" id="19LUKkm69CD" role="3clF47">
+        <node concept="3cpWs6" id="19LUKkm6bjy" role="3cqZAp">
+          <node concept="3cpWs3" id="19LUKkm6bEc" role="3cqZAk">
+            <node concept="37vLTw" id="19LUKkm6bXr" role="3uHU7w">
+              <ref role="3cqZAo" node="19LUKkm6ax7" resolve="state" />
+            </node>
+            <node concept="3cpWs3" id="19LUKkm6fq4" role="3uHU7B">
+              <node concept="Xl_RD" id="19LUKkm6fuT" role="3uHU7w">
+                <property role="Xl_RC" value="_" />
+              </node>
+              <node concept="2OqwBi" id="19LUKkm6dWC" role="3uHU7B">
+                <node concept="3VsKOn" id="19LUKkm6d$c" role="2Oq$k0">
+                  <ref role="3VsUkX" node="4_91s3j9Ubk" resolve="ToggleActionExample" />
+                </node>
+                <node concept="liA8E" id="19LUKkm6f1W" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~Class.getName()" resolve="getName" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="19LUKkm67IP" role="1B3o_S" />
+      <node concept="17QB3L" id="19LUKkm69A_" role="3clF45" />
+      <node concept="37vLTG" id="19LUKkm6ax7" role="3clF46">
+        <property role="TrG5h" value="state" />
+        <node concept="10Oyi0" id="19LUKkm6ax6" role="1tU5fm" />
+      </node>
+    </node>
+    <node concept="2tJIrI" id="19LUKkm6IPB" role="jymVt" />
+    <node concept="2YIFZL" id="19LUKkm6Mhq" role="jymVt">
+      <property role="TrG5h" value="ensureActionsRegistered" />
+      <node concept="3clFbS" id="19LUKkm6Mht" role="3clF47">
+        <node concept="3cpWs8" id="19LUKkm6Nha" role="3cqZAp">
+          <node concept="3cpWsn" id="19LUKkm6Nhb" role="3cpWs9">
+            <property role="TrG5h" value="actionManager" />
+            <node concept="3uibUv" id="19LUKkm6Nhc" role="1tU5fm">
+              <ref role="3uigEE" to="qkt:~ActionManager" resolve="ActionManager" />
+            </node>
+            <node concept="2YIFZM" id="19LUKkm6Nhd" role="33vP2m">
+              <ref role="37wK5l" to="qkt:~ActionManager.getInstance()" resolve="getInstance" />
+              <ref role="1Pybhc" to="qkt:~ActionManager" resolve="ActionManager" />
+            </node>
+          </node>
+        </node>
+        <node concept="1Dw8fO" id="19LUKkm6Nhe" role="3cqZAp">
+          <node concept="3clFbS" id="19LUKkm6Nhf" role="2LFqv$">
+            <node concept="3cpWs8" id="19LUKkm6Nhg" role="3cqZAp">
+              <node concept="3cpWsn" id="19LUKkm6Nhh" role="3cpWs9">
+                <property role="TrG5h" value="id" />
+                <node concept="17QB3L" id="19LUKkm6Nhi" role="1tU5fm" />
+                <node concept="2YIFZM" id="19LUKkm6Nhj" role="33vP2m">
+                  <ref role="37wK5l" node="19LUKkm69CA" resolve="getId" />
+                  <ref role="1Pybhc" node="4_91s3j9Ubk" resolve="ToggleActionExample" />
+                  <node concept="37vLTw" id="19LUKkm6Nhk" role="37wK5m">
+                    <ref role="3cqZAo" node="19LUKkm6Nh_" resolve="i" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbJ" id="19LUKkm6Nhl" role="3cqZAp">
+              <node concept="3clFbS" id="19LUKkm6Nhm" role="3clFbx">
+                <node concept="3clFbF" id="19LUKkm6Nhn" role="3cqZAp">
+                  <node concept="2OqwBi" id="19LUKkm6Nho" role="3clFbG">
+                    <node concept="37vLTw" id="19LUKkm6Nhp" role="2Oq$k0">
+                      <ref role="3cqZAo" node="19LUKkm6Nhb" resolve="actionManager" />
+                    </node>
+                    <node concept="liA8E" id="19LUKkm6Nhq" role="2OqNvi">
+                      <ref role="37wK5l" to="qkt:~ActionManager.registerAction(java.lang.String,com.intellij.openapi.actionSystem.AnAction)" resolve="registerAction" />
+                      <node concept="37vLTw" id="19LUKkm6Nhr" role="37wK5m">
+                        <ref role="3cqZAo" node="19LUKkm6Nhh" resolve="id" />
+                      </node>
+                      <node concept="2ShNRf" id="19LUKkm6Nhs" role="37wK5m">
+                        <node concept="1pGfFk" id="19LUKkm6Nht" role="2ShVmc">
+                          <property role="373rjd" value="true" />
+                          <ref role="37wK5l" node="4_91s3ja1fy" resolve="ToggleActionExample" />
+                          <node concept="37vLTw" id="19LUKkm6Nhu" role="37wK5m">
+                            <ref role="3cqZAo" node="19LUKkm6Nh_" resolve="i" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbC" id="19LUKkm6Nhv" role="3clFbw">
+                <node concept="10Nm6u" id="19LUKkm6Nhw" role="3uHU7w" />
+                <node concept="2OqwBi" id="19LUKkm6Nhx" role="3uHU7B">
+                  <node concept="37vLTw" id="19LUKkm6Nhy" role="2Oq$k0">
+                    <ref role="3cqZAo" node="19LUKkm6Nhb" resolve="actionManager" />
+                  </node>
+                  <node concept="liA8E" id="19LUKkm6Nhz" role="2OqNvi">
+                    <ref role="37wK5l" to="qkt:~ActionManager.getAction(java.lang.String)" resolve="getAction" />
+                    <node concept="37vLTw" id="19LUKkm6Nh$" role="37wK5m">
+                      <ref role="3cqZAo" node="19LUKkm6Nhh" resolve="id" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3cpWsn" id="19LUKkm6Nh_" role="1Duv9x">
+            <property role="TrG5h" value="i" />
+            <node concept="10Oyi0" id="19LUKkm6NhA" role="1tU5fm" />
+            <node concept="3cmrfG" id="19LUKkm6NhB" role="33vP2m">
+              <property role="3cmrfH" value="1" />
+            </node>
+          </node>
+          <node concept="2dkUwp" id="19LUKkm6NhC" role="1Dwp0S">
+            <node concept="37vLTw" id="19LUKkm6NhD" role="3uHU7B">
+              <ref role="3cqZAo" node="19LUKkm6Nh_" resolve="i" />
+            </node>
+            <node concept="37vLTw" id="19LUKkm6NhI" role="3uHU7w">
+              <ref role="3cqZAo" node="19LUKkm6vT8" resolve="ACTION_COUNT" />
+            </node>
+          </node>
+          <node concept="3uNrnE" id="19LUKkm6NhF" role="1Dwrff">
+            <node concept="37vLTw" id="19LUKkm6NhG" role="2$L3a6">
+              <ref role="3cqZAo" node="19LUKkm6Nh_" resolve="i" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="19LUKkm6KAh" role="1B3o_S" />
+      <node concept="3cqZAl" id="19LUKkm6Lus" role="3clF45" />
+    </node>
+    <node concept="2tJIrI" id="19LUKkm6fMo" role="jymVt" />
     <node concept="Wx3nA" id="4_91s3j9Yps" role="jymVt">
       <property role="TrG5h" value="selectedStates" />
       <node concept="3Tm1VV" id="4_91s3j9VcQ" role="1B3o_S" />
@@ -510,39 +688,9 @@
           </node>
         </node>
         <node concept="3clFbH" id="7g9M9eHRon6" role="3cqZAp" />
-        <node concept="3cpWs6" id="7g9M9eHRp9L" role="3cqZAp">
-          <node concept="2ShNRf" id="7g9M9eHRpts" role="3cqZAk">
-            <node concept="1pGfFk" id="7g9M9eHRvz8" role="2ShVmc">
-              <property role="373rjd" value="true" />
-              <ref role="37wK5l" to="qkt:~DefaultActionGroup.&lt;init&gt;(com.intellij.openapi.actionSystem.AnAction...)" resolve="DefaultActionGroup" />
-              <node concept="2ShNRf" id="7g9M9eHRRyL" role="37wK5m">
-                <node concept="1pGfFk" id="7g9M9eHRUV1" role="2ShVmc">
-                  <property role="373rjd" value="true" />
-                  <ref role="37wK5l" node="4_91s3ja1fy" resolve="ToggleActionExample" />
-                  <node concept="3cmrfG" id="7g9M9eHRV7m" role="37wK5m">
-                    <property role="3cmrfH" value="1" />
-                  </node>
-                </node>
-              </node>
-              <node concept="2ShNRf" id="7g9M9eHRVsu" role="37wK5m">
-                <node concept="1pGfFk" id="7g9M9eHS3TF" role="2ShVmc">
-                  <property role="373rjd" value="true" />
-                  <ref role="37wK5l" node="4_91s3ja1fy" resolve="ToggleActionExample" />
-                  <node concept="3cmrfG" id="7g9M9eHS3Yw" role="37wK5m">
-                    <property role="3cmrfH" value="2" />
-                  </node>
-                </node>
-              </node>
-              <node concept="2ShNRf" id="7g9M9eHS42m" role="37wK5m">
-                <node concept="1pGfFk" id="7g9M9eHS42n" role="2ShVmc">
-                  <property role="373rjd" value="true" />
-                  <ref role="37wK5l" node="4_91s3ja1fy" resolve="ToggleActionExample" />
-                  <node concept="3cmrfG" id="7g9M9eHS42o" role="37wK5m">
-                    <property role="3cmrfH" value="3" />
-                  </node>
-                </node>
-              </node>
-            </node>
+        <node concept="3cpWs6" id="19LUKkm6C4H" role="3cqZAp">
+          <node concept="2OkkDf" id="19LUKkm6CIm" role="3cqZAk">
+            <ref role="2Okoww" node="4_91s3j9nmA" resolve="ToggleActions" />
           </node>
         </node>
       </node>
@@ -573,6 +721,66 @@
     </node>
     <node concept="tT9cl" id="7g9M9eHS87x" role="2f5YQi">
       <ref role="tU$_T" to="tprs:WmrxDqd_N1" resolve="IDEAToolBar" />
+    </node>
+  </node>
+  <node concept="2uRRBC" id="19LUKkm5JI2">
+    <property role="TrG5h" value="RegisterToggleActions" />
+    <node concept="2uRRBj" id="19LUKkm5JI3" role="2uRRBE">
+      <node concept="3clFbS" id="19LUKkm5JI4" role="2VODD2">
+        <node concept="3clFbF" id="19LUKkm6PiD" role="3cqZAp">
+          <node concept="2YIFZM" id="19LUKkm6Pn5" role="3clFbG">
+            <ref role="37wK5l" node="19LUKkm6Mhq" resolve="ensureActionsRegistered" />
+            <ref role="1Pybhc" node="4_91s3j9Ubk" resolve="ToggleActionExample" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2uRRBI" id="19LUKkm6pud" role="2uRRBF">
+      <node concept="3clFbS" id="19LUKkm6pue" role="2VODD2">
+        <node concept="1Dw8fO" id="19LUKkm6pZB" role="3cqZAp">
+          <node concept="3cpWsn" id="19LUKkm6pZC" role="1Duv9x">
+            <property role="TrG5h" value="i" />
+            <node concept="10Oyi0" id="19LUKkm6q9l" role="1tU5fm" />
+            <node concept="3cmrfG" id="19LUKkm6qcS" role="33vP2m">
+              <property role="3cmrfH" value="1" />
+            </node>
+          </node>
+          <node concept="3clFbS" id="19LUKkm6pZD" role="2LFqv$">
+            <node concept="3clFbF" id="19LUKkm6snu" role="3cqZAp">
+              <node concept="2OqwBi" id="19LUKkm6srH" role="3clFbG">
+                <node concept="2YIFZM" id="19LUKkm6soq" role="2Oq$k0">
+                  <ref role="37wK5l" to="qkt:~ActionManager.getInstance()" resolve="getInstance" />
+                  <ref role="1Pybhc" to="qkt:~ActionManager" resolve="ActionManager" />
+                </node>
+                <node concept="liA8E" id="19LUKkm6swU" role="2OqNvi">
+                  <ref role="37wK5l" to="qkt:~ActionManager.unregisterAction(java.lang.String)" resolve="unregisterAction" />
+                  <node concept="2YIFZM" id="19LUKkm6s$o" role="37wK5m">
+                    <ref role="37wK5l" node="19LUKkm69CA" resolve="getId" />
+                    <ref role="1Pybhc" node="4_91s3j9Ubk" resolve="ToggleActionExample" />
+                    <node concept="37vLTw" id="19LUKkm6s_q" role="37wK5m">
+                      <ref role="3cqZAo" node="19LUKkm6pZC" resolve="i" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="2dkUwp" id="19LUKkm6qLm" role="1Dwp0S">
+            <node concept="37vLTw" id="19LUKkm6qdg" role="3uHU7B">
+              <ref role="3cqZAo" node="19LUKkm6pZC" resolve="i" />
+            </node>
+            <node concept="10M0yZ" id="19LUKkm6xtM" role="3uHU7w">
+              <ref role="1PxDUh" node="4_91s3j9Ubk" resolve="ToggleActionExample" />
+              <ref role="3cqZAo" node="19LUKkm6vT8" resolve="ACTION_COUNT" />
+            </node>
+          </node>
+          <node concept="3uNrnE" id="19LUKkm6rmN" role="1Dwrff">
+            <node concept="37vLTw" id="19LUKkm6rmP" role="2$L3a6">
+              <ref role="3cqZAo" node="19LUKkm6pZC" resolve="i" />
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>
